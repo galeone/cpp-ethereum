@@ -13,7 +13,7 @@ LIST(APPEND CUDA_NVCC_FLAGS_DEBUG -G)
 if(COMPUTE AND (COMPUTE GREATER 0))
 	LIST(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_${COMPUTE},code=sm_${COMPUTE})
 else(COMPUTE AND (COMPUTE GREATER 0))
-	set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-gencode arch=compute_61,code=sm_61)
+	set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-gencode arch=compute_61,code=sm_61;-gencode arch=compute_35,code=sm_35)
 endif(COMPUTE AND (COMPUTE GREATER 0))
 
 
